@@ -4,7 +4,7 @@ In some common Computer Vision(CV) tasks, such as object detection and image cla
 In fact, a good news is that a lot of classic models have been trained effectively based on some large-size dataset, like VGG, Resnet, etc. In torchvision, the vision library of PyTorch, these models are provided for us to call directly and conveniently.
 
 ## Related information
-PyTorch == 1.6.0
+PyTorch == 1.6.0  
 my grayscale dataset links are below:  
 [x_train](https://drive.google.com/file/d/1jXPXpEAWE57HshOx_m9A0bFAWRmyQR1d/view?usp=sharing), 
 [y_train](https://drive.google.com/file/d/1QO2KPs0OTrn1Qzp5C7_s1PSWY-wc06q0/view?usp=sharing),   
