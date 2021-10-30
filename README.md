@@ -1,7 +1,7 @@
 # image-classification-and-fine-tune-using-pretrained-model
 
 In some common Computer Vision(CV) tasks, such as object detection and image classification, deep learning-based methods have achieved good results. However, it costs much time and computational resource to train for great performance from scratch.   
-In fact, a good news is that a lot of classic models have been trained effectively based on some large-size dataset, like VGG, Resnet, etc. In torchvision, the vision library of PyTorch, these models are provided for us to call directly and conveniently.
+In fact, a good news is that a lot of classic models have been trained effectively based on some large-size dataset, like VGG, ResNet, etc. In torchvision, the vision library of PyTorch, these models are provided for us to call directly and conveniently.
 
 ## Related information
 PyTorch == 1.6.0  
@@ -56,4 +56,4 @@ for param in resnet50.parameters():
 ### Fine-tune more layers
 For each pretrained model, the parameters of first few layers contain the weights enforcing the general features of data/image, which should not be retrained usually.
 Therefore, the last one layer/the last few layers contain the specific information of original dataset, which could be chosen to retrain. 
-Take note that the less the number of chosen layers, the better for generalization of new model.
+Take note that the less the number of chosen layers, the better for generalization of new model. If we retrain too many parameters again, why do we apply the pretrained model?
