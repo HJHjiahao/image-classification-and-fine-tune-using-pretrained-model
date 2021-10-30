@@ -55,5 +55,5 @@ for param in resnet50.parameters():
 
 ### Fine-tune more layers
 For each pretrained model, the parameters of first few layers contain the weights enforcing the general features of data/image, which should not be retrained usually.
-Therefore, the last one layer/the last few layers contain the specific information of original dataset, which could be chosen to retrain. 
+Therefore, the last one layer/the last few layers contain the specific information of original dataset, which could be chosen to retrain.   
 Take note that the less the number of chosen layers, the better for generalization of new model. If we retrain too many parameters again, why do we apply the pretrained model?
