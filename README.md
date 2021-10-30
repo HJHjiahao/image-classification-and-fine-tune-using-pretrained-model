@@ -5,7 +5,7 @@ In fact, a good news is that a lot of classic models have been trained effective
 
 ## Related information
 PyTorch == 1.6.0  
-my grayscale dataset links are below:  
+My grayscale dataset links are below:  
 [x_train](https://drive.google.com/file/d/1jXPXpEAWE57HshOx_m9A0bFAWRmyQR1d/view?usp=sharing), 
 [y_train](https://drive.google.com/file/d/1QO2KPs0OTrn1Qzp5C7_s1PSWY-wc06q0/view?usp=sharing),   
 [x_test](https://drive.google.com/file/d/1Zvln2lbhk6Aov3bg8-dk6aYKOtiFPkIs/view?usp=sharing), 
@@ -46,7 +46,7 @@ for i, output_channel in enumerate(weights):
 ```
 
 ### Make the middle layers frozen
-Usually, we just need to train the last layer to fit our own dataset, which is efficient. So there is no need to train the middle hidden layers.
+Usually, we just need to train the last layer to fit our own dataset, which is really efficient. So there is no need to train the middle hidden layers.
 ```
 for param in resnet50.parameters():
             param.requires_grad = False
@@ -54,6 +54,6 @@ for param in resnet50.parameters():
 ```
 
 ### Fine-tune more layers
-For each pretrained model, the parameters of first few layers contain the weights enforcing the general features of data/image, which should not be retrained usually.
+For each pretrained model, the parameters of first few layers contain the weights enforcing the **general features** of data/image, which should not be retrained usually.
 Therefore, the last one layer/the last few layers contain the specific information of original dataset, which could be chosen to retrain.   
-Take note that the less the number of chosen layers, the better for generalization of new model. If we retrain too many parameters again, why do we apply the pretrained model?
+Take note that **the less the number of chosen layers, the better** for generalization of new model. If we retrain too many parameters again, why do we apply the pretrained model?
